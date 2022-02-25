@@ -8,16 +8,35 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <div class="header-content">
-        <h1>library</h1>
-        <button class="log-in">Log in</button>
+    <!-- Input Form -->
+    <div class="input-div">
+      <div class="card-div">
+        <div class="card-input">
+          <div class="input card-header">Add new book</div>
+          <input class="input input-title" type="text" placeholder="Title" />
+          <input class="input input-author" type="text" placeholder="Author" />
+          <input class="input input-pages" type="text" placeholder="Pages" />
+          <div class="input checkbox">
+            <div class="checkbox-label">Have you read it?</div>
+            <input class="checkbox-btn" type="checkbox" />
+          </div>
+          <button class="input submit">Submit</button>
+        </div>
       </div>
-    </header>
-    <section class="add-book-container">
-      <button>+ Add book</button>
-    </section>
-    <section class="grid"></section>
+    </div>
+    <!-- Page -->
+    <div class="app">
+      <header>
+        <div class="header-content">
+          <h1>library</h1>
+          <button class="log-in">Log in</button>
+        </div>
+      </header>
+      <section class="add-book-container">
+        <button id="add">+ Add book</button>
+      </section>
+      <section class="grid"></section>
+    </div>
     <!-- Script -->
     <script src="./app.js"></script>
   </body>

@@ -4,10 +4,11 @@
   box-sizing: border-box;
 }
 
-body {
+.app {
   font-family: sans-serif;
   height: 100vh;
   background: whitesmoke;
+  transition: all 1s ease;
 }
 
 /* Header */
@@ -80,5 +81,102 @@ header {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+/* Input Field */
+
+.input-div {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.344);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: -1;
+  opacity: 0;
+}
+
+.darken {
+  z-index: 99;
+  opacity: 1;
+}
+
+.card-div {
+  background: rgb(240, 240, 240);
+  width: 20rem;
+  height: 25rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-input {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.8rem;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+}
+
+.input {
+  padding: 0.9rem;
+  width: 100%;
+  border-radius: 7px;
+}
+
+.card-header {
+  font-weight: bold;
+  text-align: center;
+  padding-top: 0;
+}
+
+.input-title,
+.input-author,
+.input-pages {
+  border: none;
+  font-size: 1.1rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-label {
+  font-size: 1.3rem;
+}
+
+.checkbox-btn {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.submit {
+  border: none;
+  background: rgb(159, 232, 135);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background: rgb(149, 230, 122);
+}
+
+/* Book Card */
+
+.book-card {
+  background: grey;
+  height: 10rem;
+  width: 10rem;
 }
