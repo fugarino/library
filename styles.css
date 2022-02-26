@@ -4,10 +4,13 @@
   box-sizing: border-box;
 }
 
+body {
+  background: rgb(233, 235, 237);
+}
+
 .app {
   font-family: sans-serif;
-  height: 100vh;
-  background: whitesmoke;
+  background: rgb(233, 235, 237);
   transition: all 1s ease;
 }
 
@@ -36,7 +39,7 @@ header {
 
 .header-content > button {
   border: none;
-  background: whitesmoke;
+  background: rgb(233, 235, 237);
   padding: 1rem;
   font-size: 1rem;
   font-weight: bold;
@@ -46,7 +49,7 @@ header {
 }
 
 .header-content > button:hover {
-  background: rgb(230, 230, 230);
+  background: rgb(225, 229, 233);
 }
 
 /* Add book Btn */
@@ -60,7 +63,7 @@ header {
 
 .add-book-container > button {
   border: none;
-  background: whitesmoke;
+  background: rgb(233, 235, 237);
   font-size: 1.5rem;
   font-weight: bold;
   padding: 1rem;
@@ -74,14 +77,24 @@ header {
 }
 
 .add-book-container > button:hover {
-  background: rgb(230, 230, 230);
+  background: rgb(225, 229, 233);
 }
 
 /* Grid */
 
+.container {
+  max-width: 1124px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.9rem;
+  margin-bottom: 25px;
 }
 
 /* Input Field */
@@ -176,7 +189,36 @@ header {
 /* Book Card */
 
 .book-card {
-  background: grey;
-  height: 10rem;
-  width: 10rem;
+  background: #fff;
+  width: 21rem;
+  height: 21rem;
+  border-radius: 7px;
+  box-shadow: 0 0 5px 2px rgb(228, 228, 228);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.book-card > div {
+  padding: 0.9rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+  border-radius: 7px;
+}
+
+.book-read {
+  background: rgb(159, 232, 135);
+  cursor: pointer;
+}
+.book-not-read {
+  background: rgb(237, 141, 141);
+  cursor: pointer;
+}
+
+.book-remove {
+  background: rgb(233, 235, 237);
+  cursor: pointer;
 }
